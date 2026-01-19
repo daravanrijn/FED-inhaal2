@@ -119,10 +119,6 @@ main > ul > li:nth-of-type(2) section > img {
     object-position: 34%;
 }
 
-main > ul > li:nth-of-type(3) {
-    margin-right: 2em;
-}
-
 /* ============================================
    NAV DOTS
    ============================================ */
@@ -247,18 +243,17 @@ main > section:nth-of-type(2) h2 {
 }
 
 main > section:nth-of-type(2) ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 1em;
+    justify-content: center;
     margin: 1em 0 2em;
     padding: 0;
     list-style: none;
 }
 
 main > section:nth-of-type(2) li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex: 0 0 calc(50% - 0.5em);
     aspect-ratio: 1 / 1;
     padding: 24px;
     background-color: var(--color-white);
@@ -284,13 +279,6 @@ main > section:nth-of-type(2) li img {
     width: 100%;
     height: auto;
     object-fit: contain;
-}
-
-main > section:nth-of-type(2) li:last-child {
-    grid-column: 1 / -1;
-    justify-self: center;
-    width: 48%;
-    padding: 24px;
 }
 
 main > section:nth-of-type(2) > a {
@@ -441,12 +429,8 @@ main > section:nth-of-type(2) > a:active {
         gap: 1.5em;
     }
 
-    main > section:nth-of-type(2) ul li {
-        width: calc((100% - 2 * 1.5em) / 3);
-    }
-
-    main > section:nth-of-type(2) ul li:last-child {
-        width: calc((100% - 2 * 1.5em) / 3);
+    main > section:nth-of-type(2) li {
+    flex: 0 0 calc(33.333% - 1em);
     }
 
     main > section:nth-of-type(2) > a {
