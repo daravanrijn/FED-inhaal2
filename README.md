@@ -343,18 +343,26 @@ Toen ik even iets beter begreep hoe het werkte ging het navigeren wel beter, maa
 
 
   ### Dit was lastig/Is niet gelukt:
+
+  ! Ik ben de middag en avond na de deadline doorgegaan met coderen om de header en footer ook responsive te maken.
+  Dit is gelukt :) Alleen bij de header mist de hover state nog op de navigatie. Normaalgesproken klapt het menu uit en komt er een zwarte lijn onder het menu item waar je muis op ligt, maar dit mist nu bij mijn site. De footer is verder ook helemaal responsive.
+
+  Voor de landscape vorm kom ik er nu niet helemaal uit, deze lijkt hetzelfde als op de coca-cola site wanneer ik mijn mobiel kantel?
+
+  ### Responsive header desktop af
+  <img src="readme-images/responsive_header.png" width="375px" alt="Mijn header responsive vanaf 1200px">
+
+  ### Responsive header desktop af
+  <img src="readme-images/responsive_footer.png" width="375px" alt="Mijn footer responsive vanaf 1200px">
+
+  ---------------------------------------------------------------------------------------------------------------------------------
+  
   (Wanneer ik het maandag 19 januari om 14:00 inlever is het volgende helaas nog niet gelukt:
 
   - Het juist en responsive maken van de header en footer voor de desktop versie (vanaf 1200px).
     Dit heb ik gewoon niet meer gered qua tijd. Wel heb ik de header voor de desktop aan het begin van het blok gemaakt, dus deze code heb ik wel, van de footer nog niet.
   - Landscape/liggend voor responsive.
     Hier ben ik op het laatste moment pas achter gekomen dat dat ook nog moest en heb ik dus helaas niet meer gered.)
-
-  ! Ik ben de middag en avond na de deadline doorgegaan met coderen om de header en footer ook responsive te maken.
-  Dit is gelukt :) Alleen bij de header mist de hover state nog op de navigatie. Normaalgesproken klapt het menu uit en komt er een zwarte lijn onder het menu item waar je muis op ligt, maar dit mist nu bij mijn site. De footer is verder ook helemaal responsive nu.
-
-  Voor de landscape vorm kom ik er nu niet helemaal uit, deze lijkt hetzelfde als op de coca-cola site wanneer ik mijn mobiel kantel?
-
 
   Iets minder belangrijk, maar wat ik wel nog had gedaan met meer tijd:
 
@@ -363,7 +371,7 @@ Toen ik even iets beter begreep hoe het werkte ging het navigeren wel beter, maa
   - Op het laatste moment heb ik gezien dat ik het kleine blauwe geluidsicoon dat over de video op theathletescode.html zit niet heb. 
 
   Wat ik lastig vond:
-  - Vooral position: absolute/relative vind ik nog erg lastig te begrijpen. 
+  - Vooral position: absolute/relative/etc. vind ik nog erg lastig te begrijpen. 
   - Grid en Flexbox heb ik ook nog wel echt hulp voor nodig, maar snap ik langzaamaan steeds meer.
   - Ik ben veel tijd kwijt geweest aan de carousel. Dat vond ik denk ik het lastigste onderdeel van de twee pagina's.
 
