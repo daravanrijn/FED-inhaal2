@@ -343,15 +343,15 @@ Toen ik even iets beter begreep hoe het werkte ging het navigeren wel beter, maa
 
 
   ### Dit was lastig/Is niet gelukt:
-  _Wanneer ik het maandag 19 januari om 14:00 inlever is het volgende helaas nog niet gelukt:
+  (Wanneer ik het maandag 19 januari om 14:00 inlever is het volgende helaas nog niet gelukt:
 
   - Het juist en responsive maken van de header en footer voor de desktop versie (vanaf 1200px).
     Dit heb ik gewoon niet meer gered qua tijd. Wel heb ik de header voor de desktop aan het begin van het blok gemaakt, dus deze code heb ik wel, van de footer nog niet.
   - Landscape/liggend voor responsive.
-    Hier ben ik op het laatste moment pas achter gekomen dat dat ook nog moest en heb ik dus helaas niet meer gered._
+    Hier ben ik op het laatste moment pas achter gekomen dat dat ook nog moest en heb ik dus helaas niet meer gered.)
 
-  Ik ben de middag en avond na de deadline doorgegaan met coderen om de header en footer ook responsive te maken.
-  Dit is gelukt! Alleen bij de header mist de hover state nog op de navigatie. Normaalgesproken klapt het menu uit en komt er een zwarte lijn onder het menu item waar je muis op ligt, maar dit mist nu bij mijn site. De footer is verder ook helemaal responsive nu.
+  ! Ik ben de middag en avond na de deadline doorgegaan met coderen om de header en footer ook responsive te maken.
+  Dit is gelukt :) Alleen bij de header mist de hover state nog op de navigatie. Normaalgesproken klapt het menu uit en komt er een zwarte lijn onder het menu item waar je muis op ligt, maar dit mist nu bij mijn site. De footer is verder ook helemaal responsive nu.
 
   Voor de landscape vorm kom ik er nu niet helemaal uit, deze lijkt hetzelfde als op de coca-cola site wanneer ik mijn mobiel kantel?
 
