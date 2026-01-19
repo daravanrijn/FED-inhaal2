@@ -30,7 +30,7 @@ body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   color: var(--color-black);
-  background-color: var(--background-color);
+  background-color: green;
 }
 
 button {
