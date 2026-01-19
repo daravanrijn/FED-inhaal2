@@ -12,6 +12,11 @@
   --active-footer:#363636;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 *, ::before, ::after { 
   box-sizing: border-box; 
 }
