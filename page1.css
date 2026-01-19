@@ -1,0 +1,464 @@
+:root {
+    --background-color:#eeeeee;
+    --hover-lighter:#ededed;
+    --active-lighter:#d5d5d5;
+    --nav-dots:#00000066;
+    --hover-darker:#cdcdcd;
+    --active-darker:#a1a0a0; 
+    --shadow-less:#0000000f;
+    --shadow-more:#00000014;
+}
+
+/* ============================================
+   CAROUSEL
+   ============================================ */
+
+main > ul {
+    display: flex;
+    gap: 0.3em;
+    margin: 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+
+main > ul::-webkit-scrollbar {
+    display: none;
+}
+
+main > ul > li {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    padding: 0 0.3em;
+}
+
+main > ul > li > section {
+    position: relative;
+    display: grid;
+    align-content: start;
+    width: 100%;
+    aspect-ratio: 3 / 4.9;
+    margin: 2.5em 0;
+    padding: 24px;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+main > ul > li > section > img {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main > ul > li > section > h2,
+main > ul > li > section > p,
+main > ul > li > section > a {
+    z-index: 2;
+    margin: 0;
+    text-align: center;
+    color: var(--color-white);
+}
+
+main > ul > li > section > h2 {
+    margin-bottom: 0.3em;
+    font-weight: 600;
+    line-height: 1.3em;
+    letter-spacing: -0.02em;
+}
+
+main > ul > li > section > p {
+    margin-bottom: 1.8em;
+    padding: 0 0.2em;
+    font-size: 1.05em;
+    line-height: 1.5em;
+}
+
+main > ul > li > section > a {
+    justify-self: center;
+    display: inline-block;
+    width: 100%;
+    padding: 0.6em 1.2em;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: var(--color-white);
+    border-radius: 40px;
+    color: var(--color-black);
+}
+
+main > ul > li > section > a:hover {
+    background-color: var(--hover-lighter);
+}
+
+main > ul > li > section > a:active {
+    background-color: var(--active-lighter);
+}
+
+main > ul > li:nth-of-type(1) section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(0,0,0,.6), rgba(0,0,0,.1));
+}
+
+main > ul > li:nth-of-type(2) section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(0,0,0,.6), rgba(0,0,0,0));
+}
+
+main > ul > li:nth-of-type(2) section > img {
+    transform: scale(1.08);
+    object-position: 34%;
+}
+
+main > ul > li:nth-of-type(3) {
+    margin-right: 2em;
+}
+
+/* ============================================
+   NAV DOTS
+   ============================================ */
+
+main > nav {
+    display: flex;
+    justify-content: center;
+    gap: 0.6em;
+    margin-top: -1.5em;
+}
+
+main > nav a {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: var(--nav-dots);
+}
+
+main > nav a:active {
+    color: var(--color-black);
+}
+
+main > nav a[href="#kaart1"] {
+    color: var(--color-black);
+}
+
+main:has(#kaart1:target) nav a[href="#kaart1"],
+main:has(#kaart2:target) nav a[href="#kaart2"],
+main:has(#kaart3:target) nav a[href="#kaart3"] {
+    color: var(--color-black);
+}
+
+main:has(:target) nav a:not([href*=":target"]) {
+    color: var(--nav-dots);
+}
+
+/* ============================================
+   DUURZAAMHEID
+   ============================================ */
+
+main > section:nth-of-type(1) {
+    padding: 0;
+    margin-bottom: 2.7em;
+}
+   
+main > section:nth-of-type(1) h2 {
+    margin-bottom: 1em;
+    font-size: 1.75em;
+    font-weight: 630;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+main > section:nth-of-type(1) > div {
+    position: relative;
+    padding-left: 1.6em;
+    padding-right: 1.6em;
+}
+
+main > section:nth-of-type(1) article {
+    position: relative;
+    z-index: 2;
+    padding: 0.1em 1.6em 1.5em;
+    background-color: var(--color-white);
+    border-radius: 1em;
+    box-shadow: 0 14px 16px var(--shadow-less);
+}
+
+main > section:nth-of-type(1) h3 {
+    margin-bottom: 0;
+    font-size: 1.7em;
+    font-weight: 650;
+    letter-spacing: -0.02em;
+}
+
+main > section:nth-of-type(1) article p {
+    margin-top: 0.4em;
+    margin-bottom: 1.8em;
+
+    font-size: 1.05em;
+    font-weight: 420;
+    line-height: 1.4em;
+}
+
+main > section:nth-of-type(1) article a {
+    display: block;
+    padding: 0.4em 1.2em;
+    font-size: 1.05em;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-black);
+    border: 2px solid var(--color-black);
+    border-radius: 999px;
+}
+
+main > section:nth-of-type(1) article a:hover {
+    background-color: var(--hover-darker)
+}
+
+main > section:nth-of-type(1) article a:active {
+    background-color: var(--active-darker)
+}
+
+main > section:nth-of-type(1) img {
+    margin-top: -5em;
+}
+
+/* ============================================
+   MERKEN
+   ============================================ */
+
+main > section:nth-of-type(2) {
+    padding: 0 1.6em;
+}
+
+main > section:nth-of-type(2) h2 {
+    margin-bottom: 1.1em;
+    font-size: 1.75em;
+    font-weight: 650;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+main > section:nth-of-type(2) ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    margin: 1em 0 2em;
+    padding: 0;
+    list-style: none;
+}
+
+main > section:nth-of-type(2) li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    padding: 24px;
+    background-color: var(--color-white);
+    border-radius: 1em;
+    box-shadow: 0 10px 25px var(--shadow-more);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+main > section:nth-of-type(2) li:hover {
+    transform: scale(1.04);
+    box-shadow: 0 15px 35px var(--shadow-more);
+}
+
+main > section:nth-of-type(2) li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+main > section:nth-of-type(2) li img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+main > section:nth-of-type(2) li:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 48%;
+    padding: 24px;
+}
+
+main > section:nth-of-type(2) > a {
+    display: block;
+    margin-bottom: 3.3em;
+    padding: 0.5em 1.2em;
+    font-size: 1.05em;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-black);
+    border: 2px solid var(--color-black);
+    border-radius: 999px;
+}
+
+main > section:nth-of-type(2) > a:hover {
+    background-color: var(--hover-darker)
+}
+
+main > section:nth-of-type(2) > a:active {
+    background-color: var(--active-darker)
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (min-width: 375px) {
+    main > ul > li > section {
+        max-width: 560px;
+    }
+}
+
+@media (min-width: 600px) {
+    main > ul > li > section {
+        max-height: 900px; 
+        max-width: 1200px;     
+    }
+
+    main > ul > li > section > h2 {
+        padding: 0 1em;
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 1200px) {
+    main > ul > li > section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: clamp(520px, 45vw, 600px);
+        max-width: 1385px;
+        margin-top: 3.5em;
+        padding-left: 4em;
+    }
+
+    main > ul > li:nth-of-type(1) section img {
+        content: url(images-homepage/hero_ab-testing_green-ver_desktop.png);
+    }
+
+    main > ul > li:nth-of-type(3) section img {
+        content: url(images-homepage/hero_img_groot.webp);
+    }
+
+    main > ul > li > section > h2 {
+        max-width: 20ch;
+        margin-left: 0.8em;
+        padding: 0;
+        font-size: 2.4em;
+        font-weight: 650;
+        text-align: left;
+    }
+
+    main > ul > li > section > p {
+        max-width: 40ch;
+        margin-left: 2em;
+        padding: 0;
+        font-size: 1em;
+        text-align: left;
+    }
+
+    main > ul > li section a { 
+        width: auto; 
+        margin-left: 1.8em;
+        padding: 0.6em 6.5em; 
+    }
+
+    main > section:nth-of-type(1) {
+        max-width: 1125px;
+        margin: 3.5em auto;
+    }
+
+    main > section:nth-of-type(1) h2 {
+        font-size: 2.1em;
+    }
+
+    main > section:nth-of-type(1) > div {
+        display: flex;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    main > section:nth-of-type(1) img {
+        display: block;
+        width: 57%;
+        margin-top: 5em;
+        border-radius: 0.5em;
+        content: url(images-homepage/nl_homepage_campaign_card_desktop_1280x1024\(1\).jpg);
+    }
+
+    main > section:nth-of-type(1) article {
+        position: absolute;
+        right: 0.5em;
+        margin-top: 6.9em;
+        padding: 2em 3.8em 4.2em;
+        transform: translateY(-20%);
+    }
+
+    main > section:nth-of-type(1) article h3 {
+        font-size: 2em;
+    }
+
+    main > section:nth-of-type(1) article p {
+        max-width: 36ch;
+        font-size: 1.1em;
+        line-height: 1.4;
+    }
+
+    main > section:nth-of-type(1) article a {
+        width: 80%;
+        margin-top: 8em;
+    }
+
+    main > section:nth-of-type(2) {
+        max-width: 780px;
+        margin: 0 auto;
+    }
+
+    main > section:nth-of-type(2) h2 {
+        font-size: 2em;
+    }
+
+    main > section:nth-of-type(2) ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+        gap: 1.5em;
+    }
+
+    main > section:nth-of-type(2) ul li {
+        width: calc((100% - 2 * 1.5em) / 3);
+    }
+
+    main > section:nth-of-type(2) ul li:last-child {
+        width: calc((100% - 2 * 1.5em) / 3);
+    }
+
+    main > section:nth-of-type(2) > a {
+        max-width: 330px;       
+        margin: 0 auto 7em;
+    }
+}
+
+@media (min-width: 1440px) {
+    main > ul > li > section {
+        max-width: 1385px;       
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

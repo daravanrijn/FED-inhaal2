@@ -1,0 +1,584 @@
+:root {
+  --color-white: white; 
+  --color-black: black;
+  --hover-header:#353535;
+  --active-header:#4f4f4f;
+  --color-submenu: #525252;
+  --color-light-grey:#d5d5d5; 
+  --background-last-section:#353535;
+  --hover-last-section: #4a4a4a;
+  --active-last-section: #606060;
+  --hover-footer:#1c1c1c;
+  --active-footer:#363636;
+}
+
+*, ::before, ::after { 
+  box-sizing: border-box; 
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-black);
+  background-color: var(--background-color);
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1em 1.5em;
+  background-color: var(--color-white);
+}
+
+header h1 {
+  margin: 0;
+}
+
+header h1 img {
+  width: 3.9em;
+}
+
+header > a {
+  margin: 0 1.7em 0 auto;
+  padding: 1.05em 1.4em;
+  font-size: 0.75em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  border-radius: 999px;
+}
+
+header > a:hover {
+  background-color: var(--hover-header);
+}
+
+header > a:active {
+  background-color: var(--active-header);
+}
+
+header > button {
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+header > button img {
+  width: 1.8em; 
+}
+
+/* ============================================
+  NAV Hamburgermenu
+  ============================================ */
+
+/* Hulp van ChatGPT voor het hamburgermenu en de in/uitklapbare menu items (ook voor bijbehornde JS). Wel zelf alles aangepast voor zover ik het begreep of bijv px naar em*/
+
+header > nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  padding: 2em 1.8em;
+  background-color: var(--color-white);
+}
+
+header > nav > button {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  font-size: 2em;
+  cursor: pointer;
+  color: var(--color-black);
+  background: none;
+  border: none;
+}
+
+header nav ul {
+  margin: 3em 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+header nav ul > li {
+  margin-bottom: 0.3em;
+  font-size: 1.6em;
+  font-weight: 620;
+  letter-spacing: -0.02em;
+  color: var(--color-black);
+}
+
+header nav ul a {
+  font-size: 0.97em;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+header nav details {
+  width: 100%;
+}
+
+header summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0 0.2em 0 0;
+  font-size: 0.97em;
+  font-weight: 620;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  list-style: none;
+}
+
+header summary::-webkit-details-marker {
+  display: none;
+}
+
+header summary::after {
+  content: "›";
+  font-size: 2em;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--color-black);
+  transform-origin: center;
+  transition: transform 0.35s ease;
+}
+
+header details[open] summary::after {
+  transform: rotate(90deg);
+}
+
+header nav details ul {
+  margin: 0.5em 0 0;
+  padding: 0 0 0.5em 1em;
+  list-style: none;
+}
+
+header nav details ul a {
+  color: var(--color-submenu);
+}
+
+header nav details ul li {
+  margin-bottom: 1.3em;
+  font-size: 0.65em;
+  font-weight: 420;
+  letter-spacing: 0.02em;
+}
+
+header nav > a {
+  display: block;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  text-align: center;
+}
+
+header nav > a:first-of-type::before {
+  content: "";
+  position: absolute;
+  top: -1.5em;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--color-light-grey);
+}
+
+header nav > a:first-of-type {
+  position: relative;
+  margin-top: auto;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  border-radius: 999px;
+}
+
+header nav > a:last-of-type {
+  margin-top: 1em;
+  padding: 0.5em 1.2em;
+  border: 2px solid var(--color-black);
+  border-radius: 999px;
+  color: var(--color-black);
+}
+
+/* ============================================
+  LAATSTE SECTION (Blijf op de hoogte)
+  ============================================ */
+
+/* Ik heb mij te laat pas gerealiseerd dat deze section eigenlijk gewoon bij de footer hoort. Ook gebruik ik een div hier omdat het me anders niet lukte met de styling wanneer het responsive wordt en de tekst en knop naast elkaar komen. Als ik meer tijd had gehad had ik nog verder gekeken naar manieren hiervoor zonder gebruik te maken van een div. Ook zou ik dit deel bij de footer toevoegen. */
+
+main > section:last-of-type {
+  padding: 1.5em 1.6em 2.5em;
+  color: var(--color-white);
+  background-color: var(--background-last-section);
+}
+
+main > section:last-of-type h2 {
+  margin-bottom: 0;
+  font-size: 1.5em;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  color: var(--color-white);
+}
+
+main > section:last-of-type p {
+  margin-bottom: 2em;
+  font-size: 1.05em;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--color-white);
+}
+
+main > section:last-of-type button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  width: 100%;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-white);
+  background-color: var(--background-last-section);
+  border: 2px solid var(--color-white);
+  border-radius: 999px;
+}
+
+main > section:last-of-type button:hover {
+  background-color: var(--hover-last-section)
+}
+
+main > section:last-of-type button:active {
+  background-color: var(--active-last-section)
+}
+
+/* ============================================
+  FOOTER
+  ============================================ */
+
+  /* In eerste instantie veel hulp gebruikt van ChatGPT met de code voor de footer voor de mobile. Ik vond dit nog erg lastig. Later moest ik wat dingen aanpassen omdat het niet goed zou gaan met de responsive versie en dit lukte eigenlijk wel grotendeels zelf. */
+
+footer {
+  padding: 3.5em 1.6em 2.5em;
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-white);
+  background: var(--color-black);
+}
+
+/* SECTION 1 – Logo en knop */
+footer > section:first-of-type {
+  margin: 0 0 1.4em 0;
+  padding-top: 0;
+  border-bottom: 1px solid var(--color-light-grey);
+}
+
+footer > section:first-of-type > img {
+  width: 15.7em;
+  height: auto;
+  margin: 0 0 2.5em;
+}
+
+footer > section:first-of-type a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  width: 100%;
+  padding: 0.37em 1.2em;
+  margin-bottom: 2.5em;
+  font-size: 1.02em;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+  border-radius: 999px;
+}
+
+footer > section:first-of-type a:hover {
+  background-color: var(--hover-footer);
+}
+
+footer > section:first-of-type a:active {
+  background-color: var(--active-footer);
+}
+
+footer > section:nth-of-type(2) + section {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* SECTION 2 & 3 – Menu items */
+footer > details {
+  margin: 0;
+  padding: 0;
+}
+
+footer > section details {
+  padding: 1.3em 0;         
+}
+
+footer summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  font-weight: 620;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  list-style: none;
+}
+
+footer summary::-webkit-details-marker {
+  display: none;
+}
+
+footer summary::after {
+  content: "⌄";
+  font-size: 1.3em;
+  line-height: 0.8;
+  transition: transform 0.25s ease;
+}
+
+footer details[open] summary::after {
+  transform: rotate(-180deg);
+}
+
+footer details ul {
+  margin: 1.4em 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer details li {
+  margin: 0.9em 0 0 2em;
+  cursor: pointer;
+}
+
+footer details a {
+  font-size: 0.9em;
+  font-weight: 620;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+/* SECTION 4 – Juridische links */
+footer > section:nth-of-type(4) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.5em;
+  row-gap: 0.8em;
+  margin-top: 1.2em;
+  padding: 2.5em 0;
+  border-top: 1px solid var(--color-light-grey);
+  border-bottom: 1px solid var(--color-light-grey);
+}
+
+footer > section:nth-of-type(4) a {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.45em;
+  text-align: left;
+  text-decoration: none;
+  color: var(--color-white);
+  background: none;
+}
+
+/* SECTION 5 – Social icons */
+footer > section:nth-of-type(5) {
+  display: flex;
+  gap: 1em;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+}
+
+footer > section:nth-of-type(5) a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  height: 2em;
+  border: 2px solid var(--color-white);
+  border-radius: 50%;
+}
+
+footer section:nth-of-type(5) a:hover {
+  background-color: var(--hover-footer);
+}
+
+footer section:nth-of-type(5) a:active {
+  background-color: var(--active-footer);
+}
+
+footer > section:nth-of-type(5) img {
+  width: 0.9em;
+  height: auto;
+}
+
+/* SECTION 6 – App stores */
+footer > section:nth-of-type(6) {
+  display: flex;
+  gap: 0.5em;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 1.8em;
+  border-top: none;
+}
+
+footer > section:nth-of-type(6) img {
+  width: 8.2em;
+  height: auto;
+  border: 1px solid var(--color-white);
+  border-radius: 8px;
+}
+
+footer > p {
+  font-size: 0.78em;
+  line-height: 1.45em;
+  letter-spacing: 0.03em;
+}
+
+/* ============================================
+  RESPONSIVE
+  ============================================ */
+
+@media (min-width: 600px) {
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 3.5em 4em 2.8em;
+  }
+
+  footer > section:first-of-type {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    margin-bottom: 1.3em;
+  }
+
+  footer > section:first-of-type a {
+    width: auto;
+    margin-left: auto;
+    padding: 0.3em 0.9em;
+  }
+
+  footer > section, 
+  footer > p { 
+    flex-basis: 100%; 
+  }
+
+  footer details { 
+    pointer-events: none; 
+  }
+
+  footer summary::after { 
+    display: none; 
+  }
+
+  footer summary { 
+    padding-bottom: 0.4em;
+    font-size: 0.62em;
+    font-weight: 550;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--color-light-grey);
+    cursor: default;
+  }
+ 
+  footer details ul {
+    display: block;
+    font-size: 1em;
+  }
+
+  footer details li {
+    margin: 0 0 1.2em 0;
+  }
+
+  footer > section:nth-of-type(2),
+  footer > section:nth-of-type(3) {
+    flex-basis: 50%;
+    align-self: flex-start;
+  }
+
+  footer > section:nth-of-type(4) {
+    display: block;
+    margin-top: 0;
+    padding: 0 0 1.5em 0;
+    border-top: none;
+  }
+
+  footer > section:nth-of-type(4) a {
+    margin-bottom: 0.9em;
+  }
+}
+
+@media (min-width: 1200px) {
+  main > section:last-of-type {
+    display: flex;
+    align-items: center;
+    padding-top: 2.1em;
+    padding-bottom: 1.5em;
+    padding-left: calc((100vw - 1200px) / 2 + 2.5em);
+    padding-right: calc((100vw - 1200px) / 2 + 2.5em);
+  }
+
+  main > section:last-of-type > div {
+    max-width: 480px;
+  }
+
+  main > section:last-of-type  h2 {
+    font-size: 1.75em;
+  }
+
+  main > section:last-of-type button {
+    margin-left: auto;
+    margin-bottom: 0.8em;
+    width: auto;
+    padding: 0.5em 4.7em;
+    white-space: nowrap;
+  }
+}
+
+/* Flex-basis en padding-left/right: calc((...)) heb ik met code van ChatGPT, dit moest ik wel nog leren te begrijpen */

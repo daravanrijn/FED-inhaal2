@@ -1,0 +1,415 @@
+:root {
+    --color-blue:#0f8cf0;
+    --background-color:#c8c8d2;
+    --hover-blue-lighter:#9ebef8;
+    --active-blue-lighter:#e7eefd;
+    --hover-blue-darker:#0d7dd9;
+    --active-blue-darker:#0b70c3; 
+}
+
+header > a {
+    background-color: var(--color-blue);
+    color: var(--color-black);
+}
+
+header > a:hover {
+    background-color: var(--hover-blue-lighter);
+}
+
+header > a:active {
+    background-color: var(--active-blue-lighter);
+}
+
+main > section:not(:first-of-type):not(:last-of-type) {
+    padding: 0 1.6em;
+}
+
+/* ============================================
+   SECTION 1 (Hero image +) tekst
+   ============================================ */
+
+main > section:nth-of-type(1) h2 {
+    margin: 1.45em auto;
+    padding: 0 0.8em;
+    font-size: 1.8em;
+    font-weight: 650;
+    line-height: 1.25em;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+/* ============================================
+   SECTION 2 Tekst (+ Video)
+   ============================================ */
+
+main > section:nth-of-type(2) h2 {
+    margin: 1.35em auto 1em;
+    font-size: 1.5em;
+    font-weight: 650;
+    line-height: 1.33em;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+/* ============================================
+   SECTION 3 Tekst + download
+   ============================================ */
+
+main > section:nth-of-type(3) h2 {
+    margin: 1.5em 0 2.5em;
+    font-weight: 650;
+    line-height: 1.33em;
+    letter-spacing: -0.03em;
+}
+
+main > section:nth-of-type(3) h3 {
+    padding-top: 1.6em;
+    margin-bottom: 0;
+    font-size: 1.05em;
+    font-weight: 650;
+}
+
+main > section:nth-of-type(3) p {
+    margin-top: 0.6em;
+    font-size: 1.05em;
+    font-weight: 425;
+    line-height: 1.4em;
+    letter-spacing: 0.01em;
+}
+
+main > section:nth-of-type(3) p strong {
+    font-weight: 625;
+}
+
+main > section:nth-of-type(3) p + p {
+    margin-top: 2.4em;
+} 
+
+main > section:nth-of-type(3) a {
+    display: block;
+    margin: 1.8em auto 3.3em;
+    padding: 0.58em 1.2em;
+    background-color: var(--color-blue);
+    font-size: 1.05em;
+    font-weight: 650;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+main > section:nth-of-type(3) a:hover {
+    background-color: var(--hover-blue-lighter);
+}
+
+main > section:nth-of-type(3) a:active {
+    background-color: var(--active-blue-lighter);
+}
+
+/* ============================================
+   SECTION 4 Vier atleten
+   ============================================ */
+
+main > section:nth-of-type(4) article {
+    margin-bottom: 4.5em;
+}
+
+main > section:nth-of-type(4) article img {
+    width: 100%;
+}
+
+main > section:nth-of-type(4) article p {
+    margin: 1.4em auto 0.4em;
+    font-size: 1.5em;
+    font-weight: 660;
+    line-height: 1.3em;
+    letter-spacing: -0.03em;
+    text-align: center;
+}
+
+main > section:nth-of-type(4) article small {
+    display: block;
+    font-size: 1.05em;
+    font-weight: 430;
+    text-align: center;
+}
+
+/* ============================================
+   SECTION 5 Alle atleten
+   ============================================ */
+
+main > section:nth-of-type(5) h2 {
+    margin-bottom: 0;
+    font-size: 1.7em;
+    text-align: center;
+}
+
+main > section:nth-of-type(5) p {
+    font-size: 1.05em;
+    font-weight: 430;
+    line-height: 1.4em;
+    text-align: center;
+}
+
+main > section:nth-of-type(5) ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    margin: 2em 0;
+    padding: 0;
+    list-style: none;
+}
+
+main > section:nth-of-type(5) li {
+    text-align: center;
+}
+
+main > section:nth-of-type(5) li img {
+    width: 100%;
+}
+
+main > section:nth-of-type(5) h3 {
+    margin: 0.7em 0 0.1em;
+    font-size: 1.04em;
+    font-weight: 620;
+}
+
+main > section:nth-of-type(5) li p {
+    margin: 0;
+    font-size: 1.05em;
+    line-height: 1.4;
+}
+
+main > section:nth-of-type(5) ul li:last-child {
+    grid-column: 1 / -1;  /* Element mag de hele grid breedte gebruiken */
+    justify-self: center;
+    width: 49%;
+}
+
+/* ============================================
+   SECTION 6 & 7 Tekt onderaan + Powerade
+   ============================================ */
+
+main > section:nth-of-type(6) p {
+    margin: 1.8em auto;
+    font-size: 1.5em;
+    font-weight: 650;
+    line-height: 1.3em;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+main > section:nth-of-type(7) {
+    margin: 3.5em 1.6em;
+    text-align: center;
+    background-color: var(--color-blue);
+}
+
+main > section:nth-of-type(7) h2 {
+    padding-top: 0.9em;
+    margin-bottom: 0;
+    font-size: 1.75em;
+    font-weight: 650;
+    letter-spacing: -0.02em;
+}
+
+main > section:nth-of-type(7) a {
+    display: inline-flex; /* Staat naast andere elementen + inhoud in het midden */
+    align-items: center;
+    justify-content: center;
+    width: 2.5em;
+    height: 2.5em;
+    margin: 1.5em 0.25em;
+    border: 2px solid var(--color-black);
+}
+
+main > section:nth-of-type(7) a:hover {
+    background-color: var(--hover-blue-darker)
+}
+
+main > section:nth-of-type(7) a:active {
+    background-color: var(--active-blue-darker)
+}
+
+main > section:nth-of-type(7) a img {
+    width: 0.85em;
+    height: auto;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (min-width: 600px) {
+    main > section:first-of-type img {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    main > section:nth-of-type(2) video {
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    main > section:first-of-type img {
+        width: 100%;
+        max-width: 1440px;
+        content: url(images-athletes/powerade_the-athletes-code_hero-desktop.jpg)
+    }
+
+    main > section:nth-of-type(1) h2 {
+        max-width: 34ch;
+        font-size: 2em;
+        margin: 1.7em auto 0;
+    }
+
+    main > section:nth-of-type(2) {
+        display: flex;
+        align-items: center;
+        gap: 5em;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2em;
+    }
+
+    main > section:nth-of-type(2) h2 {
+        max-width: 24ch;
+        font-size: 1.8em;
+        line-height: 1.25em;
+        text-align: start;
+    }
+    
+    main > section:nth-of-type(2) video {
+        max-width: 47%;
+    }
+
+    main > section:nth-of-type(3) {
+        max-width: 780px;       
+        margin: 4em auto 8em;
+    }
+
+    main > section:nth-of-type(3) h2 {
+        margin-bottom: 3.2em;
+        font-size: 1.8em;
+        line-height: 1.25em;
+    }
+
+    main > section:nth-of-type(3) a {
+        max-width: 19.5em;       
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    main > section:nth-of-type(4) {
+        max-width: 1200px;
+        margin: 2em auto 4.5em;
+    }
+
+    /* Hulp van ChatGPT gehad voor het positioneren van de elementen in de articles. Ik probeer de grid zoveel mogelijk zelf te begrijpen, maar ik vind het nog wel lastig */
+
+    main > section:nth-of-type(4) article {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        column-gap: 8em;
+        align-items: center;
+        margin-bottom: 7.5em;
+        padding: 0 1em;
+    }
+
+    main > section:nth-of-type(4) article:nth-of-type(even) {
+        grid-template-columns: 1fr 1.2fr;
+    }
+
+    main > section:nth-of-type(4) article:last-of-type {
+        margin-bottom: 0;
+    }
+
+    main > section:nth-of-type(4) article img {
+        grid-column: 1;
+        grid-row: 1 / 3;
+        width: 100%;
+    }
+
+    main > section:nth-of-type(4) article:nth-of-type(even) img {
+        grid-column: 2;
+    }
+
+    main > section:nth-of-type(4) article p {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: end;
+        margin: 0 0 0.6em 0;
+        max-width: 22ch;
+        font-size: 1.8em;
+        text-align: left;
+    }
+
+    main > section:nth-of-type(4) article small {
+        grid-column: 2;
+        grid-row: 2;
+        align-self: start;
+        padding-left: 2em;
+        text-align: left;
+    }
+
+    main > section:nth-of-type(4) article:nth-of-type(even) p,
+    main > section:nth-of-type(4) article:nth-of-type(even) small {
+        grid-column: 1;
+    }
+
+    main > section:nth-of-type(4) article p br {
+        display: none;
+    }
+
+    main > section:nth-of-type(5) {
+        max-width: 780px;       
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    main > section:nth-of-type(5) h2 {
+        margin-top: 0;
+        font-size: 2em;
+    }
+
+    main > section:nth-of-type(5) ul {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5em;
+     }
+
+    main > section:nth-of-type(5) ul li:last-child {
+        grid-column: auto;
+        justify-self: stretch;
+        width: auto;
+    }
+
+    main > section:nth-of-type(6) {
+        max-width: 780px;       
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 8em;
+    }
+
+    main > section:nth-of-type(6) > p:first-of-type, 
+    main > section:nth-of-type(6) p:nth-of-type(2) {
+        font-size: 1.8em;
+    }
+
+    main > section:nth-of-type(7) {
+        display: flex;
+        align-items: center;
+        max-width: 1125px;
+        margin: 0 auto 8em;
+    }
+
+    main > section:nth-of-type(7) h2 {
+        margin-top: 0;
+        padding: 1em 0;
+        font-size: 2em;
+    }
+
+    main > section:nth-of-type(7) a:first-of-type {
+        margin-left: auto;
+    }
+}
