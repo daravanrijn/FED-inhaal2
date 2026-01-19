@@ -30,7 +30,7 @@ body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   color: var(--color-black);
-  background-color: green;
+  background-color: var(--background-color);
 }
 
 button {
@@ -560,6 +560,61 @@ footer > p {
 }
 
 @media (min-width: 1200px) {
+
+  header h1 { 
+    order: 1; 
+  }
+
+  header > nav { 
+    order: 2;
+    position: static;
+    display: block;
+    width: auto;
+    height: auto;
+    padding: 0;
+    background: none;
+    margin-left: 2.3em; /* beetje ruimte na logo */
+  }
+
+  header > a { 
+    order: 3;
+    margin-left: auto; /* duw deze naar helemaal rechts */
+  }
+
+  /* hamburger blijft weg */
+  header > button {
+    display: none;
+  }
+
+  /* mobile-only nav items weg */
+  header nav > button,
+  header nav > a {
+    display: none;
+  }
+
+  /* ul horizontaal */
+  header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2.3em;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   main > section:last-of-type {
     display: flex;
     align-items: center;
